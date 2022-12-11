@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="20dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/crime_case_image_view"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_crime_case_file_24" />
+
+        <CheckBox
+            android:id="@+id/list_item_crime_solved_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/list_item_crime_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/list_item_crime_solved_check_box"
+            android:layout_toEndOf="@+id/imageView"
+            android:padding="4dp"
+            android:textStyle="bold"
+            tools:text="Crime Title" />
+
+        <TextView
+            android:id="@+id/list_item_crime_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_item_crime_title_text_view"
+            android:layout_toStartOf="@+id/list_item_crime_solved_check_box"
+            android:layout_toEndOf="@id/imageView"
+            android:padding="4dp"
+            tools:text="Crime Date" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
